@@ -3,8 +3,8 @@
 import approvelocation from './map.js'
 let routetoggle = false;
 
-import map from '../map/map.js'
-import initialFly from '../map/mapfunctions.js';
+import map from './map.js'
+import initialFly from './mapfunctions.js';
 
 //console.log(userlocation)
 

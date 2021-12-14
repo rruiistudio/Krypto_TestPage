@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rruiistudio/Kryptomon_Micro-website.git"
+    "url": "git+https://github.com/rruiistudio/Krypto_TestPage.git"
   },
   "keywords": [
     "game"
@@ -20,9 +20,9 @@
   "author": "rruiidev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rruiistudio/Kryptomon_Micro-website/issues"
+    "url": "https://github.com/rruiistudio/Krypto_TestPage.git/issues"
   },
-  "homepage": "https://github.com/rruiistudio/index.html",
+  "homepage": "https://rruiistudio.github.io/Krypto_TestPage/",
   "dependencies": {
     "@turf/boolean-point-in-polygon": "^6.5.0",
     "@turf/buffer": "^6.5.0",
