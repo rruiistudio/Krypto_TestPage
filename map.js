@@ -110,7 +110,7 @@ function successLocation(position) {
         let filter = makeRadius(userlocation, searchradius);
         addData(map, radiusLayer, filter);
         console.log('watching location successfully')
-        replaceClass(boxstatus);
+        //replaceClass(boxstatus);
         unlockBox(newdistance, closestItem, boxstatus);
 
         return userlocation
@@ -175,6 +175,8 @@ function convertInactive(list, index) {
         return list
 }
 // TO FIX THIS ONE
+
+/*
 function replaceClass(list) {
         let el = document.getElementByClass('mark');
         el.forEach(i => {
@@ -185,6 +187,7 @@ function replaceClass(list) {
             }
         })
 }
+*/
 
 function passboxfound(index) {
         var api_link = 'https://api.kryptomon.co/egg-hunt/openBox.php';
@@ -486,6 +489,7 @@ function addData(map, layer, data) {
 }
 
 export default function approvelocation(counter) {
+        console.log("this is from the approvelocation function")
         if (counter == 0) {
                 updateLocation();
                 addInfo(map, 'radius', filter, 'white');
@@ -503,7 +507,7 @@ export default function approvelocation(counter) {
 
 export function updateLocation() {
         let newlocation = initialFly();
-        return userlocation
+        return newlocation
 
 }
 
