@@ -8,6 +8,7 @@ function getValue() {
 }
 
 let value = text.addEventListener('click', getValue);
+let value = text.addEventListener('touchstart', getValue);
 console.log(value)
 const fail = document.createElement('p')
 let count = 0;
@@ -22,6 +23,7 @@ let g;
 var form = document.getElementById("form");
 function handleForm(event) { event.preventDefault(); }
 text.addEventListener('click', handleForm);
+text.addEventListener('touchstart', handleForm);
 
 
 // get document elements
@@ -146,3 +148,4 @@ let button = document.getElementById('verif');
 redirect();
 loadconfirm();
 button.addEventListener('click',  loginSuccess);
+button.addEventListener('touchstart',  loginSuccess);
