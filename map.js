@@ -46,6 +46,8 @@ redirect();
 
 //INITIALIZE MAP
 
+// add a buffer --> on map load in here
+
 console.log(userlocation)
 export var map = setupMap(userlocation);
 let user = marker(userlocation);
@@ -330,8 +332,9 @@ function mysterybox(data) {
                         .setPopup(
                                 new mapboxgl.Popup({ offset: 25 }) // add popups
                                         .setHTML(
-                                                `<img id="mysterybox" src = "./Box_Closed.png" width="100px">
-                                <h3>Mysterybox</h3><p>${calculateDistance(element, userlocation)} m away</p>`
+                                                `<img id="mysterybox" src = "./Box_Closed.png" width="50px">
+                                <h3 style = "font-size: 12px; margin-top: -10%;" >Mysterybox</h3><p style = "font-size: 11px; margin-top: -11%">${calculateDistance(element, userlocation)} m away</p>
+                                <style >`
                                         )
                         )
                         .addTo(map);

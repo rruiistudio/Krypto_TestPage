@@ -172,24 +172,27 @@ body {
             }
         }
 
-
-        #button_container{
-
-            .button{
-              width: 150px;
-              padding-top: 5%;
-              padding-bottom: 50%; 
-              z-index: 20;
-          }
-      
-          .button:active{
-              opacity: 50%; 
-              z-index: 10;
-          }
-        }
-
     }
 }
+
+#button_container{
+
+  z-index: 20;
+
+  .button{
+    width: 150px;
+    padding-top: 5%;
+    padding-bottom: 50%; 
+    z-index: 11;
+
+    .button:active{
+      opacity: 50%; 
+      z-index: 10;
+  }
+  }
+}
+
+
 
 .logbutton{
   width: 50%;
@@ -244,9 +247,6 @@ body {
     height: 400px; 
     padding-bottom: 20%;
     
-    
-
-    
   }
 
 }
@@ -275,7 +275,20 @@ body {
     background-size: cover;
     border-radius: 50%;
     cursor: pointer;
+    font-size: 10px;
     animation: pulse 2s infinite;
+
+    #boxdiv{
+      #h3{
+        font-size: 15px; 
+      }
+      #p {
+        font-size: 10px; 
+      }
+
+    }
+
+   
   }
 
   .boxfound {

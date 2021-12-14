@@ -14,6 +14,8 @@ let button = document.getElementById('button_container');
 let ui = document.getElementById('midsection')
 
 
+button.addEventListener('touchstart', changeScreen);
+
 function appendElement(elements) {
 
     // create new elements
@@ -103,7 +105,7 @@ export function appendLocation() {
 
     function toggleNav() {
         count++
-        console.log('touchstartedy touchstarted')
+        console.log('touchstarted')
 
         if (count == 1) {
             let b = document.getElementById('navbox');
@@ -207,6 +209,6 @@ function changeScreen() {
     return counter, routetoggle;
 
 }
-button.addEventListener('touchstart', changeScreen);
+
 
 export default routetoggle;
