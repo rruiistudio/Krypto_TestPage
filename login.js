@@ -7,7 +7,7 @@ function getValue() {
     value = document.getElementById('login').value;
 }
 
-let value = text.addEventListener('touchstart', getValue);
+let value = text.addEventListener('click', getValue);
 console.log(value)
 const fail = document.createElement('p')
 let count = 0;
@@ -21,7 +21,7 @@ let g;
 // prevent form from refreshing on click 
 var form = document.getElementById("form");
 function handleForm(event) { event.preventDefault(); }
-text.addEventListener('touchstart', handleForm);
+text.addEventListener('click', handleForm);
 
 
 // get document elements
@@ -40,8 +40,6 @@ export default function loginSuccess() {
     value = document.getElementById('login').value;
     let t
 
-    //let fetchBtn = document.getElementById("verif");
-    //fetchBtn.addEventListener("click", buttonclickhandler);
     let data = { walletId: value };
     let URL = "https://api.kryptomon.co/egg-hunt/getUser.php";
 
@@ -139,10 +137,10 @@ function clearInput() {
     document.getElementById('login').value = "";
 }
 
-text.addEventListener('touchstart', loginSuccess)
+text.addEventListener('click', loginSuccess)
 
 //let button = document.getElementById('verif');
 
 redirect();
 loadconfirm();
-//button.addEventListener('touchstart',  loginSuccess);
+//button.addEventListener('click',  loginSuccess);
