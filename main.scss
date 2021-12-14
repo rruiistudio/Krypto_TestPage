@@ -97,38 +97,21 @@ body {
             margin-top: 25%;     
         }
 
-        
        
     }
-
-    .button{
-        width: 40vw;
-        display: inline-block; 
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        z-index: 10;
-    }
-
-    .button:active{
-        opacity: 50%; 
-        z-index: 10;
-    }
-
-
     
 
     #corners { 
         position: fixed;
         display: inline-flex; 
-        flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         bottom: 0; 
-        width: 100vw;
         overflow: hidden; 
+        width: 100%;
+        z-index: 9;
 
         .corners{
-            width: 100vw;
+           
             position: fixed;
             margin: 0; 
             bottom: 0; 
@@ -159,17 +142,17 @@ body {
     }
 
     #midsection{
-        display: flex;
+        display: fixed;
         flex-direction: column; 
         text-align: center;
         justify-content: center;
+        padding-top: 50%; 
         width: 100vw;
         height: 100vh;
         align-items: center;
         color: white; 
-        font-size: 90px;
-        font-family: Arial, Helvetica, sans-serif !important;
-
+        font-size: 120%;
+        
         #artwork_container{
             width: inherit;
             display: flex; 
@@ -184,20 +167,40 @@ body {
                 display: inherit;
                 width: 40%;
                 align-items: center;
-                padding-bottom: 5%; 
+                padding-bottom: 5%;
+                padding-top: 5% 
             }
         }
 
 
         #button_container{
-            position: inherit;
-            display: inherit;
-            width: 50%;
+
+            .button{
+              width: 150px;
+              padding-top: 5%; 
+              z-index: 11;
+          }
+      
+          .button:active{
+              opacity: 50%; 
+              z-index: 10;
+          }
         }
 
 
 
     }
+}
+
+.logbutton{
+  width: 50%;
+  padding-top: 5%; 
+  z-index: 11;
+}
+
+.logbutton:active{
+  opacity: 50%; 
+  z-index: 10;
 }
 
 #container{

@@ -163,7 +163,6 @@ export function appendLocation() {
             //b.appendChild(dir);
 
             x.addEventListener('click', closeNav)
-            x.addEventListener('touchstart', closeNav)
           
             return x;
         }
@@ -173,7 +172,6 @@ export function appendLocation() {
     }
 
     navig.addEventListener('click', toggleNav);
-    navig.addEventListener('touchstart', toggleNav);
     return navig, locate
 }
 
@@ -206,6 +204,5 @@ function changeScreen() {
 
 }
 button.addEventListener('click', changeScreen);
-button.addEventListener('touchstart', changeScreen);
 
 export default routetoggle;

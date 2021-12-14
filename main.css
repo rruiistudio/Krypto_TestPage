@@ -107,43 +107,21 @@ body {
   margin-top: 25%;
 }
 
-#cont .button {
-  width: 40vw;
-  display: inline-block;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  z-index: 10;
-}
-
-#cont .button:active {
-  opacity: 50%;
-  z-index: 10;
-}
-
 #cont #corners {
   position: fixed;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   bottom: 0;
-  width: 100vw;
   overflow: hidden;
+  width: 100%;
+  z-index: 9;
 }
 
 #cont #corners .corners {
-  width: 100vw;
   position: fixed;
   margin: 0;
   bottom: 0;
@@ -173,9 +151,7 @@ body {
 }
 
 #cont #midsection {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: fixed;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -184,12 +160,14 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 50%;
+  width: 100vw;
+  height: 100vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   color: white;
-  font-size: 90px;
-  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 120%;
 }
 
 #cont #midsection #artwork_container {
@@ -218,12 +196,29 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 5%;
+  padding-top: 5%;
 }
 
-#cont #midsection #button_container {
-  position: inherit;
-  display: inherit;
+#cont #midsection #button_container .button {
+  width: 150px;
+  padding-top: 5%;
+  z-index: 11;
+}
+
+#cont #midsection #button_container .button:active {
+  opacity: 50%;
+  z-index: 10;
+}
+
+.logbutton {
   width: 50%;
+  padding-top: 5%;
+  z-index: 11;
+}
+
+.logbutton:active {
+  opacity: 50%;
+  z-index: 10;
 }
 
 #container {
@@ -364,7 +359,7 @@ body {
 }
 
 .mapboxgl-popup-content {
-  background-image: url("./image/item_balloon.svg");
+  background-image: url("./item_balloon.svg");
   text-align: center;
   font-family: Arial, Helvetica, sans-serif !important;
   font-size: 20px;
