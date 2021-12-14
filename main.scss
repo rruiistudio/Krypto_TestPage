@@ -100,32 +100,29 @@ body {
        
     }
     
-
     #corners { 
-        position: fixed;
-        display: inline-flex; 
-        justify-content: center;
-        bottom: 0; 
-        overflow: hidden; 
-        width: 100%;
-        z-index: 0;
+      position: fixed;
+      display: inline-flex; 
+      flex-direction: row;
+      justify-content: space-between;
+      bottom: 0; 
+      width: 100vw;
+      overflow: hidden; 
 
-        .corners{
-           
-            position: fixed;
-            margin: 0; 
-            bottom: 0; 
-        }
+      .corners{
+          position: fixed;
+          margin: 0; 
+          bottom: 0; 
+      }
 
-        #leftP{ 
-            left: 0 !important;
-        }
+      #leftP{ 
+          left: 0 !important;
+      }
 
-        #rightP{
-            right: 0 !important;
-        }
-    }
-
+      #rightP{
+          right: 0 !important;
+      }
+  }
     #map{
         position: fixed;
         z-index: -1;
@@ -177,17 +174,17 @@ body {
 
 #button_container{
 
-  z-index: 20;
+  z-index: 3;
 
   .button{
     width: 150px;
     padding-top: 5%;
     padding-bottom: 50%; 
-    z-index: 11;
+    z-index: 2;
 
     .button:active{
       opacity: 50%; 
-      z-index: 10;
+      z-index: 2;
   }
   }
 }
@@ -197,12 +194,12 @@ body {
 .logbutton{
   width: 50%;
   padding-top: 5%; 
-  z-index: 11;
+  z-index: 2;
 }
 
 .logbutton:active{
   opacity: 50%; 
-  z-index: 10;
+  z-index: 2;
 }
 
 #container{

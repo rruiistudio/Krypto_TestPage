@@ -9,6 +9,7 @@ let usermarker
 let filter
 let radiusLayer = 'radius'
 let searchradius = 2;
+let newdistance;
 
 let distA = [];
 let elIndex;
@@ -57,7 +58,7 @@ let user = marker(userlocation);
 await storeBox(userlocation)
 console.log(boxlist)
 
-await mysterybox(boxlist);
+await mysterybox(boxlist, userlocation);
 console.log(boxlist)
 
 
@@ -104,7 +105,7 @@ function successLocation(position) {
 
         let watchlocation = [long, lat]
         getRoute(watchlocation, boxlist[closestItem])
-        let newdistance = calculateDistance(watchlocation, boxlist[closestItem])
+        newdistance = calculateDistance(watchlocation, boxlist[closestItem])
         console.log(watchlocation)
 
         updateMarker(user, watchlocation);
@@ -115,7 +116,7 @@ function successLocation(position) {
         //replaceClass(boxstatus);
         unlockBox(newdistance, closestItem, boxstatus);
 
-        return userlocation
+        return userlocation, newdistance
 }
 
 function unlockBox(distance, closestItem, boxstatus) {
@@ -286,10 +287,17 @@ export async function spawnBox(userlocation) {
 
         console.log(json)
 
-        localStorage.setItem('box1', json.features[0].geometry.coordinates)
-        localStorage.setItem('box2', json.features[1].geometry.coordinates)
-        localStorage.setItem('box3', json.features[2].geometry.coordinates)
+        if (localStorage.getItem('box1') == null) {
+                localStorage.setItem('box1', json.features[0].geometry.coordinates)
+        }
 
+        if (localStorage.getItem('box2') == null) {
+                localStorage.setItem('box2', json.features[1].geometry.coordinates)
+        }
+
+        if (localStorage.getItem('box3') == null) {
+                localStorage.setItem('box3', json.features[2].geometry.coordinates)
+        }
 
         return json;
 
@@ -312,7 +320,7 @@ async function storeBox(userlocation) {
         box3 = [parseFloat(box3[0]), parseFloat(box3[1])]
 
         boxlist = [box1, box2, box3];
-        console.log('item retrieved');
+        console.log('boxes retrieved');
 
         return boxlist
 }
@@ -320,7 +328,7 @@ async function storeBox(userlocation) {
 //TO TEST ALL OF THIS 
 
 
-function mysterybox(data) {
+function mysterybox(data, user) {
 
         data.forEach(element => {
                 const el = document.createElement('div');
@@ -333,7 +341,7 @@ function mysterybox(data) {
                                 new mapboxgl.Popup({ offset: 25 }) // add popups
                                         .setHTML(
                                                 `<img id="mysterybox" src = "./Box_Closed.png" width="50px">
-                                <h3 style = "font-size: 12px; margin-top: -10%;" >Mysterybox</h3><p style = "font-size: 11px; margin-top: -11%">${calculateDistance(element, userlocation)} m away</p>
+                                <h3 style = "font-size: 12px; margin-top: -10%;" >Mysterybox</h3><p style = "font-size: 11px; margin-top: -11%">${calculateDistance(element, user)} m away</p>
                                 <style >`
                                         )
                         )

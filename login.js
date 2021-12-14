@@ -63,8 +63,8 @@ export default function loginSuccess() {
         let boxes = g.boxes;
         console.log(boxes)
 
-        let boxesMsg = [boxes[0].message, boxes[1].message, boxes[2].message];
-        console.log(boxesMsg);
+        //let boxesMsg = [boxes[0].message, boxes[1].message, boxes[2].message];
+        //console.log(boxesMsg);
         console.log(id)
     
         if (status == 'listed') {
