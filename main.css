@@ -312,7 +312,7 @@ body {
 }
 
 .mark {
-  background-image: url("../images/boxes.png");
+  background-image: url("./boxes.png");
   background-size: cover;
   border-radius: 50%;
   cursor: pointer;
@@ -321,14 +321,14 @@ body {
 }
 
 .boxfound {
-  background-image: url("../images/box-found.png");
+  background-image: url("./box-found.png");
   background-size: cover;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .marker {
-  background-image: url("../images/user.png");
+  background-image: url("./user.png");
   background-size: cover;
   border-radius: 50%;
   cursor: pointer;
@@ -337,7 +337,7 @@ body {
 }
 
 .closemarker {
-  background-image: url("../images/user-close.png");
+  background-image: url("./user-close.png");
   background-size: cover;
   border-radius: 50%;
   cursor: pointer;
@@ -346,7 +346,7 @@ body {
 }
 
 .closermarker {
-  background-image: url("../images/user-closer.png");
+  background-image: url("./user-closer.png");
   background-size: cover;
   border-radius: 50%;
   cursor: pointer;
