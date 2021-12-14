@@ -81,36 +81,33 @@ let c
 let d
 let locate
 
+import countdown from './countdown.js'
+
 export function appendLocation() {
     d = document.getElementById('util');
-    var locate = document.createElement("img");
+    locate = document.createElement('div');
     navig = document.createElement("img");
 
-    d.style.paddingBottom = "8%";
-
-    locate.src = "./locate.png";
-    locate.id = "locate";
-    locate.style.zIndex = "10";
-    locate.style.width = "10%";
-    locate.classList.add("toggle");
-    locate.style.visibility='hidden';
-
+    locate.style.color = "white";
     navig.src = "./navigate.png";
     navig.id = "navig";
-    navig.style.zIndex = "10";
+    navig.style.zIndex = "15";
     navig.style.width = "10%";
     navig.classList.add("toggle");
+    navig.style.paddingBottom = "50%";
+    locate.style.paddingBottom = "10%";
 
-    d.appendChild(locate);
     d.appendChild(navig);
-    console.log('child appended')
+    d.appendChild(locate);
+    
 
     function toggleNav() {
         count++
+        console.log('clickedy clicked')
 
         if (count == 1) {
-            //let b = document.getElementById('navbox');
-            //let dir = document.createElement('div');
+            let b = document.getElementById('navbox');
+            let dir = document.createElement('div');
             let box = document.getElementById('instructions');
             let map = document.getElementById('map');
             let head = document.getElementById('head'); 
@@ -161,10 +158,11 @@ export function appendLocation() {
                 map.style.zIndex = 1; 
                 head.style.zIndex = 2; 
                 corners.style.zIndex = 2; 
+                d.style.zIndex = 3; 
                 count = 0;
             }
 
-            //b.appendChild(dir);
+            b.appendChild(dir);
 
             x.addEventListener('click', closeNav)
           
@@ -175,7 +173,9 @@ export function appendLocation() {
 
     }
 
+    countdown(locate);
     navig.addEventListener('click', toggleNav);
+    
     return navig, locate
 }
 

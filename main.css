@@ -118,7 +118,7 @@ body {
   bottom: 0;
   overflow: hidden;
   width: 100%;
-  z-index: 9;
+  z-index: 0;
 }
 
 #cont #corners .corners {
@@ -257,6 +257,7 @@ body {
           align-items: center;
   height: 100vh;
   width: 100vh;
+  overflow-y: scroll !important;
 }
 
 #instructions .example::-webkit-scrollbar {
@@ -265,8 +266,7 @@ body {
 }
 
 #instructions #textarea {
-  font-size: 10;
-  padding: 15%;
+  padding: 10%;
   padding-top: 15%;
   position: inherit;
   -webkit-box-pack: left;
@@ -274,9 +274,9 @@ body {
           justify-content: left;
   text-align: left;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 45px;
+  font-size: 15px;
   height: 400px;
-  overflow-y: scroll !important;
+  padding-bottom: 20%;
 }
 
 #h3 {
@@ -388,24 +388,27 @@ body {
 }
 
 #util {
-  position: absolute;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   bottom: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 12%;
 }
 
 .toggle {
-  padding: 30%;
-  padding-bottom: 0% !important;
+  padding: 10%;
+  padding-bottom: 10% !important;
   bottom: 0;
   z-index: 1;
   opacity: 50%;
