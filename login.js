@@ -8,7 +8,7 @@ function getValue() {
 }
 
 let value = text.addEventListener('click', getValue);
-let value = text.addEventListener('touchstart', getValue);
+value = text.addEventListener('touchstart', getValue);
 console.log(value)
 const fail = document.createElement('p')
 let count = 0;
