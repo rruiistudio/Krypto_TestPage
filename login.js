@@ -7,8 +7,7 @@ function getValue() {
     value = document.getElementById('login').value;
 }
 
-let value = text.addEventListener('click', getValue);
-value = text.addEventListener('touchstart', getValue);
+let value = text.addEventListener('click touchstart', getValue);
 console.log(value)
 const fail = document.createElement('p')
 let count = 0;
@@ -22,8 +21,7 @@ let g;
 // prevent form from refreshing on click 
 var form = document.getElementById("form");
 function handleForm(event) { event.preventDefault(); }
-text.addEventListener('click', handleForm);
-text.addEventListener('touchstart', handleForm);
+text.addEventListener('click touchstart', handleForm);
 
 
 // get document elements
@@ -141,11 +139,10 @@ function clearInput() {
     document.getElementById('login').value = "";
 }
 
-text.addEventListener('click', loginSuccess)
+text.addEventListener('click touchstart', loginSuccess)
 
-let button = document.getElementById('verif');
+//let button = document.getElementById('verif');
 
 redirect();
 loadconfirm();
-button.addEventListener('click',  loginSuccess);
-button.addEventListener('touchstart',  loginSuccess);
+//button.addEventListener('click touchstart',  loginSuccess);
