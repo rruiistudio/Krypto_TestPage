@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/rruiistudio/Krypto_TestPage.git/issues"
   },
-  "homepage": "https://rruiistudio.github.io/Krypto_TestPage/",
+  "homepage": "https://github.com/rruiistudio/index.html",
   "dependencies": {
     "@turf/boolean-point-in-polygon": "^6.5.0",
     "@turf/buffer": "^6.5.0",
