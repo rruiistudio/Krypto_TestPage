@@ -103,7 +103,7 @@ export function appendLocation() {
 
     function toggleNav() {
         count++
-        console.log('clickedy clicked')
+        console.log('touchstartedy touchstarted')
 
         if (count == 1) {
             let b = document.getElementById('navbox');
@@ -164,7 +164,7 @@ export function appendLocation() {
 
             b.appendChild(dir);
 
-            x.addEventListener('click', closeNav)
+            x.addEventListener('touchstart', closeNav)
           
             return x;
         }
@@ -174,7 +174,7 @@ export function appendLocation() {
     }
 
     countdown(locate);
-    navig.addEventListener('click', toggleNav);
+    navig.addEventListener('touchstart', toggleNav);
     
     return navig, locate
 }
@@ -207,6 +207,6 @@ function changeScreen() {
     return counter, routetoggle;
 
 }
-button.addEventListener('click', changeScreen);
+button.addEventListener('touchstart', changeScreen);
 
 export default routetoggle;
