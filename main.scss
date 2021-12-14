@@ -177,8 +177,9 @@ body {
 
             .button{
               width: 150px;
-              padding-top: 5%; 
-              z-index: 11;
+              padding-top: 5%;
+              padding-bottom: 50%; 
+              z-index: 20;
           }
       
           .button:active{
@@ -186,8 +187,6 @@ body {
               z-index: 10;
           }
         }
-
-
 
     }
 }

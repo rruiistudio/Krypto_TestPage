@@ -33,17 +33,18 @@ function appendElement(elements) {
 
     button.id = "game_button";
     button.className = "button";
+    
 
     button.src = elements[0];
 
     art.id = "art";
     art.src = elements[1];
-    art.style.width = "30vw";
+    art.style.width = "25vw";
 
 
     prompt.id = "p";
-    prompt.style.width = "90vw";
-    prompt.style.padding = "5%";
+    prompt.style.width = "70vw";
+    prompt.style.padding = "2%";
     prompt.src = elements[2];
 
     pdiv.replaceChild(prompt, old);
@@ -85,11 +86,14 @@ export function appendLocation() {
     var locate = document.createElement("img");
     navig = document.createElement("img");
 
+    d.style.paddingBottom = "8%";
+
     locate.src = "./locate.png";
     locate.id = "locate";
     locate.style.zIndex = "10";
     locate.style.width = "10%";
     locate.classList.add("toggle");
+    locate.style.visibility='hidden';
 
     navig.src = "./navigate.png";
     navig.id = "navig";

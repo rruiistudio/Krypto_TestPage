@@ -202,7 +202,8 @@ body {
 #cont #midsection #button_container .button {
   width: 150px;
   padding-top: 5%;
-  z-index: 11;
+  padding-bottom: 50%;
+  z-index: 20;
 }
 
 #cont #midsection #button_container .button:active {
